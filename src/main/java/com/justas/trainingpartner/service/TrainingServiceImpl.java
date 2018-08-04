@@ -1,6 +1,7 @@
 package com.justas.trainingpartner.service;
 
 import com.justas.trainingpartner.model.Exercise;
+import com.justas.trainingpartner.model.Program;
 import com.justas.trainingpartner.repository.ExerciseRepository;
 import com.justas.trainingpartner.repository.ProgramRepository;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,8 @@ public class TrainingServiceImpl implements TrainingService {
         this.exerciseRepository = exerciseRepository;
         this.programRepository = programRepository;
     }
+
+    // Exercise methods.
 
     @Override
     public Exercise saveExercise(Exercise exercise) {
@@ -36,5 +39,27 @@ public class TrainingServiceImpl implements TrainingService {
     @Override
     public void deleteExercise(int id) {
         exerciseRepository.deleteById(id);
+    }
+
+    // Program methods.
+
+    @Override
+    public Program saveProgram(Program program) {
+        return programRepository.save(program);
+    }
+
+    @Override
+    public List<Program> getUserPrograms(int userId) {
+        return programRepository.findByUserId(userId);
+    }
+
+    @Override
+    public Optional<Program> getProgram(int id) {
+        return programRepository.findById(id);
+    }
+
+    @Override
+    public void deleteProgram(int id) {
+        programRepository.deleteById(id);
     }
 }
