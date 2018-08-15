@@ -1,30 +1,19 @@
 package com.justas.trainingpartner.service;
 
-import com.justas.trainingpartner.model.Exercise;
-import com.justas.trainingpartner.model.Program;
+import com.justas.trainingpartner.model.Training;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface TrainingService {
 
-    // Exercise methods.
+    // Training methods.
 
-    Exercise saveExercise(Exercise exercise);
+    Training saveTraining(Training training);
 
-    List<Exercise> getUserExercises(int userId);
+    Optional<Training> getTraining(int id);
 
-    Optional<Exercise> getExercise(int id);
+    List<Training> getUserTrainings(String username);
 
-    void deleteExercise(int id);
-
-    // Program methods.
-
-    Program saveProgram(Program program);
-
-    List<Program> getUserPrograms(int userId);
-
-    Optional<Program> getProgram(int id);
-
-    void deleteProgram(int id);
+    void deleteTraining(int id);
 }

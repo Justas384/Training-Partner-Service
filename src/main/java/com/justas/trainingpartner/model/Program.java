@@ -2,6 +2,7 @@ package com.justas.trainingpartner.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "PROGRAM")
@@ -11,11 +12,15 @@ public class Program implements Serializable {
     @Column(name = "ID")
     private int id;
 
-    @Column(name = "USER")
-    private int userId;
+    @Column(name = "USERNAME")
+    private String username;
 
     @Column(name = "PROGRAM")
     private String program;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "PROGRAM_ID")
+    private List<Exercise> exercises;
 
     public int getId() {
         return id;
@@ -25,12 +30,12 @@ public class Program implements Serializable {
         this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getProgram() {
@@ -39,5 +44,13 @@ public class Program implements Serializable {
 
     public void setProgram(String program) {
         this.program = program;
+    }
+
+    public List<Exercise> getExercises() {
+        return exercises;
+    }
+
+    public void setExercises(List<Exercise> exercises) {
+        this.exercises = exercises;
     }
 }
