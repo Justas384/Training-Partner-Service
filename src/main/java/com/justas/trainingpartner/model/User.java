@@ -8,6 +8,9 @@ import java.util.List;
 @Table(name = "users")
 public class User implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
+    private int id;
     private String username;
 
     @Column(columnDefinition = "char")
@@ -16,8 +19,31 @@ public class User implements Serializable {
     private boolean enabled;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "username")
+    @JoinColumn(name = "USER_ID")
     private List<Authority> authorities;
+
+    public User() {
+
+    }
+
+    public User(String username, String password, boolean enabled) {
+        this.username = username;
+        this.password = password;
+        this.enabled = enabled;
+    }
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;

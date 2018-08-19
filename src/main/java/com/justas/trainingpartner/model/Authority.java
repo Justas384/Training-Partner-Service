@@ -1,25 +1,48 @@
 package com.justas.trainingpartner.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "authorities")
 public class Authority implements Serializable {
     @Id
-    private String username;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
+    private int id;
 
-    @Id
+    @Column(name = "USER_ID")
+    private int user;
+
     private String authority;
 
-    public String getUsername() {
-        return username;
+    public Authority() {
+
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public Authority(int user, String authority) {
+        this.user = user;
+        this.authority = authority;
+    }
+
+    public Authority(String authority) {
+        this.authority = authority;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getUser() {
+        return user;
+    }
+
+    public void setUser(int user) {
+        this.user = user;
     }
 
     public String getAuthority() {
