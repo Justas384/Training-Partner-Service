@@ -10,23 +10,19 @@ public class Authority implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private int id;
-
-    @Column(name = "USER_ID")
-    private int user;
-
     private String authority;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "USER_ID")
+    private User user;
 
     public Authority() {
 
     }
 
-    public Authority(int user, String authority) {
+    public Authority(String authority, User user) {
+        this.authority = authority;
         this.user = user;
-        this.authority = authority;
-    }
-
-    public Authority(String authority) {
-        this.authority = authority;
     }
 
     public int getId() {
@@ -37,11 +33,11 @@ public class Authority implements Serializable {
         this.id = id;
     }
 
-    public int getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(int user) {
+    public void setUser(User user) {
         this.user = user;
     }
 

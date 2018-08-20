@@ -1,5 +1,7 @@
 package com.justas.trainingpartner.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -18,6 +20,7 @@ public class User implements Serializable {
 
     private boolean enabled;
 
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "USER_ID")
     private List<Authority> authorities;

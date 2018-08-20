@@ -8,7 +8,6 @@ import com.justas.trainingpartner.payload.LoginRequest;
 import com.justas.trainingpartner.payload.SignUpRequest;
 import com.justas.trainingpartner.repository.UserRepository;
 import com.justas.trainingpartner.security.JWTTokenProvider;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -42,7 +41,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+    public ResponseEntity authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginRequest.getUsername(),
@@ -58,10 +57,9 @@ public class AuthenticationController {
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody SignUpRequest signUpRequest) {
+    public ResponseEntity registerUser(@Valid @RequestBody SignUpRequest signUpRequest) {
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
-            return new ResponseEntity(new APIResponse(false, "Username is already taken!"),
-                    HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().body(new APIResponse(false, "Username is already taken!"));
         }
 
         // Creating user's account.
@@ -73,7 +71,7 @@ public class AuthenticationController {
 //        TODO: consider granting default role in a cleaner way.
 
         List<Authority> authorities = new ArrayList<>();
-        Authority authority = new Authority("ROLE_USER");
+        Authority authority = new Authority("ROLE_USER", user);
         authorities.add(authority);
 
         user.setAuthorities(authorities);
@@ -84,6 +82,6 @@ public class AuthenticationController {
                 .fromCurrentContextPath().path("/api/users/{username}")
                 .buildAndExpand(result.getUsername()).toUri();
 
-        return ResponseEntity.created(location).body(new APIResponse(true, "User registered successfully."));
+        return ResponseEntity.created(location).body(result);
     }
 }

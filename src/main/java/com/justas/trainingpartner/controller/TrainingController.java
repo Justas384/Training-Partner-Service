@@ -1,11 +1,15 @@
 package com.justas.trainingpartner.controller;
 
+import com.justas.trainingpartner.exception.ResourceNotFoundException;
 import com.justas.trainingpartner.model.Training;
+import com.justas.trainingpartner.payload.APIResponse;
 import com.justas.trainingpartner.service.TrainingService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/trainings")
@@ -17,7 +21,7 @@ public class TrainingController {
     }
 
     @PostMapping
-    public Training saveTraining(@RequestBody Training training) {
+    public ResponseEntity<Training> saveTraining(@RequestBody Training training) {
         Training trainingToUpdate = trainingService.getTraining(training.getId()).orElse(null);
 
         // If training exists, it is updated. Otherwise, new training is saved.
@@ -27,27 +31,36 @@ public class TrainingController {
             trainingToUpdate.setDay(training.getDay());
             trainingToUpdate.setTrainingItems(training.getTrainingItems());
 
-            return trainingService.saveTraining(trainingToUpdate);
+            return ResponseEntity.ok(trainingService.saveTraining(trainingToUpdate));
         }
 
-        return trainingService.saveTraining(training);
+        Training result = trainingService.saveTraining(training);
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentContextPath().path("/api/trainings/{id}")
+                .buildAndExpand(result.getId()).toUri();
+
+        return ResponseEntity.created(location).body(result);
+    }
+
+    @GetMapping("/{id}")
+    public Training getTraining(@PathVariable int id) {
+        return trainingService.getTraining(id).orElseThrow(() -> new ResourceNotFoundException("Training", "ID", id));
     }
 
     @GetMapping("/{username}")
     public List<Training> getUserTrainings(@PathVariable String username) {
+//        TODO: refactor to return PagedResponse.
+
         return trainingService.getUserTrainings(username);
     }
 
     @DeleteMapping("/{id}")
-    public String deleteTraining(@PathVariable int id) {
-        Optional<Training> training = trainingService.getTraining(id);
-
-        if (!training.isPresent()) {
-//            throw new TrainingNotFoundException("Training with ID " + id + " not found.");
-        }
+    public ResponseEntity<APIResponse> deleteTraining(@PathVariable int id) {
+        trainingService.getTraining(id).orElseThrow(() -> new ResourceNotFoundException("Training", "ID", id));
 
         trainingService.deleteTraining(id);
 
-        return "Deleted training ID - " + id + ".";
+        return ResponseEntity.ok(new APIResponse(true, "Training deleted successfully."));
     }
 }

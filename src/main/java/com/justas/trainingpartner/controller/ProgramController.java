@@ -1,11 +1,15 @@
 package com.justas.trainingpartner.controller;
 
+import com.justas.trainingpartner.exception.ResourceNotFoundException;
 import com.justas.trainingpartner.model.Program;
+import com.justas.trainingpartner.payload.APIResponse;
 import com.justas.trainingpartner.service.ProgramService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/programs")
@@ -17,7 +21,7 @@ public class ProgramController {
     }
 
     @PostMapping
-    public Program saveProgram(@RequestBody Program program) {
+    public ResponseEntity<Program> saveProgram(@RequestBody Program program) {
         Program programToUpdate = programService.getProgram(program.getId()).orElse(null);
 
         // If program exists, it is updated. Otherwise, new program is saved.
@@ -26,27 +30,31 @@ public class ProgramController {
             programToUpdate.setProgram(program.getProgram());
             programToUpdate.setExercises(programToUpdate.getExercises());
 
-            return programService.saveProgram(programToUpdate);
+            return ResponseEntity.ok(programService.saveProgram(programToUpdate));
         }
 
-        return programService.saveProgram(program);
+        Program result = programService.saveProgram(program);
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentContextPath().path("/api/programs/{id}")
+                .buildAndExpand(result.getId()).toUri();
+
+        return ResponseEntity.created(location).body(result);
     }
 
     @GetMapping("/{username}")
     public List<Program> getUserPrograms(@PathVariable String username) {
+//        TODO: refactor to return PagedResponse.
+
         return programService.getUserPrograms(username);
     }
 
     @DeleteMapping("/{id}")
-    public String deleteProgram(@PathVariable int id) {
-        Optional<Program> program = programService.getProgram(id);
-
-        if (!program.isPresent()) {
-//            throw new ProgramNotFoundException("Program with ID " + id + " not found.");
-        }
+    public ResponseEntity<APIResponse> deleteProgram(@PathVariable int id) {
+        programService.getProgram(id).orElseThrow(() -> new ResourceNotFoundException("Program", "ID", id));
 
         programService.deleteProgram(id);
 
-        return "Deleted program ID - " + id + ".";
+        return ResponseEntity.ok(new APIResponse(true, "Program deleted successfully."));
     }
 }

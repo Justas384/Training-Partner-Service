@@ -17,8 +17,8 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @GetMapping("/users/{username}")
-    public User getUser(@PathVariable(value = "username") String username) {
+    @GetMapping("/{username}")
+    public User getUser(@PathVariable String username) {
         return userRepository.findByUsername(username).orElseThrow(() -> new ResourceNotFoundException("User", "username", username));
     }
 }
