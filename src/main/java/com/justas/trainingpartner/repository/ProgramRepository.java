@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ProgramRepository extends JpaRepository<Program, Integer> {
-    List<Program> findByUsername(String username);
+    List<Program> findByUserId(int userId);
 }

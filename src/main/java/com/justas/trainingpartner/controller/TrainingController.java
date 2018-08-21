@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/trainings")
@@ -48,12 +47,14 @@ public class TrainingController {
         return trainingService.getTraining(id).orElseThrow(() -> new ResourceNotFoundException("Training", "ID", id));
     }
 
-    @GetMapping("/{username}")
-    public List<Training> getUserTrainings(@PathVariable String username) {
-//        TODO: refactor to return PagedResponse.
+//    TODO: refactor endpoint to be unique.
 
-        return trainingService.getUserTrainings(username);
-    }
+//    @GetMapping("/{userId}")
+//    public List<Training> getUserTrainings(@PathVariable int userId) {
+////        TODO: refactor to return PagedResponse.
+//
+//        return trainingService.getUserTrainings(userId);
+//    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<APIResponse> deleteTraining(@PathVariable int id) {

@@ -13,7 +13,7 @@ public interface TrainingService {
 
     Optional<Training> getTraining(int id);
 
-    List<Training> getUserTrainings(String username);
+    List<Training> getUserTrainings(int userId);
 
     void deleteTraining(int id);
 }

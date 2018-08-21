@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fd11edf-a657-4b02-a616-b855c46dacc4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/audit/UserDateAudit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/configuration/AuditingConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/configuration/AuditingConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/ProgramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/ProgramController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/TrainingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/TrainingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Authority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Authority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/exception/AppException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/exception/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Training.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Training.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/ProgramRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/ProgramRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/TrainingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/TrainingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/justas/trainingpartner/model/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/justas/trainingpartner/model/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/justas/trainingpartner/repository/ProgramRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/justas/trainingpartner/repository/ProgramRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/justas/trainingpartner/service/TrainingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/justas/trainingpartner/service/TrainingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/justas/trainingpartner/service/TrainingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/justas/trainingpartner/service/TrainingServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,10 +105,10 @@
           <entry key="dummy" value="18" />
           <entry key="gitignore" value="4" />
           <entry key="html" value="124" />
-          <entry key="java" value="5196" />
+          <entry key="java" value="5464" />
           <entry key="js" value="121" />
           <entry key="properties" value="165" />
-          <entry key="txt" value="180" />
+          <entry key="txt" value="233" />
           <entry key="xml" value="113" />
           <entry key="yml" value="19" />
         </counts>
@@ -106,7 +118,7 @@
           <entry key="class" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="java" value="209" />
+          <entry key="java" value="242" />
           <entry key="js" value="5" />
           <entry key="properties" value="7" />
           <entry key="xml" value="8" />
@@ -117,9 +129,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="124" />
-          <entry key="JAVA" value="5196" />
+          <entry key="JAVA" value="5464" />
           <entry key="JavaScript" value="121" />
-          <entry key="PLAIN_TEXT" value="202" />
+          <entry key="PLAIN_TEXT" value="255" />
           <entry key="Properties" value="165" />
           <entry key="XML" value="113" />
           <entry key="YAML" value="19" />
@@ -131,7 +143,7 @@
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="209" />
+          <entry key="JAVA" value="242" />
           <entry key="JavaScript" value="5" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="7" />
@@ -144,22 +156,24 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/TrainingController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Training.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+            <state relative-caret-position="105">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1497#1498#0" expanded="true" />
+                <element signature="e#1523#1524#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/configuration/SecurityConfiguration.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="82" column="28" lean-forward="true" selection-end-line="94" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="375">
+              <caret line="36" column="5" selection-end-line="45" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -194,19 +208,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/dao/ExerciseRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/ExerciseRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/ExerciseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Program.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/TrainingItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/TrainingRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Exercise.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Training.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/ProgramRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/JS/app.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/JS/reducer/indexReducer.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/JS/index.js" />
@@ -227,7 +231,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/security/UserPrincipal.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/security/CurrentUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/payload/LoginRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/payload/SignUpRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/payload/JWTAuthenticationResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/payload/APIResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/exception/AppException.java" />
@@ -241,10 +244,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Authority.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/payload/SignUpRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/AuthenticationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/ProgramController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/configuration/AuditingConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/audit/UserDateAudit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/ProgramRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/TrainingRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/TrainingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/ProgramController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/configuration/SecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Training.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Program.java" />
       </list>
     </option>
   </component>
@@ -365,6 +379,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="trainingpartner" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="audit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training-partner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Training_Partner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="trainingpartner" type="462c0819:PsiDirectoryNode" />
               <item name="payload" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -417,7 +441,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534770090736" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534839540536" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -477,7 +501,7 @@
       <workItem from="1534015263514" duration="33780000" />
       <workItem from="1534606734119" duration="2475000" />
       <workItem from="1534615939549" duration="25595000" />
-      <workItem from="1534705285063" duration="7956000" />
+      <workItem from="1534705285063" duration="14530000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented program model and controller.">
       <created>1533415091796</created>
@@ -500,11 +524,18 @@
       <option name="project" value="LOCAL" />
       <updated>1534705524281</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated controllers to use ResponseEntity.">
+      <created>1534770397944</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1534770397944</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101305000" />
+    <option name="totallyTimeSpent" value="107879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="815" extended-state="6" />
@@ -556,7 +587,8 @@
     <MESSAGE value="Implemented program model and controller." />
     <MESSAGE value="Refactored and extended model and its related resources." />
     <MESSAGE value="Initially implemented authentication with login and sign up APIs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initially implemented authentication with login and sign up APIs." />
+    <MESSAGE value="Updated controllers to use ResponseEntity." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated controllers to use ResponseEntity." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -572,59 +604,24 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/dao/ExerciseDAOImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/ExerciseController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/ExerciseRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/TrainingRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="43" lean-forward="true" selection-start-column="43" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Exercise.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/ProgramRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -685,40 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/payload/LoginRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="e#240#241#0" expanded="true" />
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/payload/SignUpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/payload/APIResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -736,40 +699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/exception/AppException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/TrainingItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.0.7.RELEASE/spring-security-config-5.0.7.RELEASE.jar!/org/springframework/security/config/annotation/authentication/configuration/AuthenticationConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="218" column="30" selection-start-line="218" selection-start-column="30" selection-end-line="218" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/configuration/AuditingConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,20 +753,6 @@
           <caret line="38" column="82" lean-forward="true" selection-start-line="38" selection-start-column="82" selection-end-line="38" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/exception/BadRequestException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -891,16 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -913,32 +822,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/AuthenticationController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/exception/AppException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+        <state relative-caret-position="120">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Training.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/payload/LoginRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="390">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding>
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/payload/SignUpRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/exception/BadRequestException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1497#1498#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/AuthenticationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="86" column="1" lean-forward="true" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/TrainingItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/configuration/AuditingConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/ProgramServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/ProgramRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/repository/TrainingRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/service/TrainingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/ProgramController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="52" column="38" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="38" />
+        <state relative-caret-position="401">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -947,18 +984,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/controller/TrainingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+        <state relative-caret-position="358">
+          <caret line="49" column="43" lean-forward="true" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/configuration/SecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="82" column="28" lean-forward="true" selection-end-line="94" selection-end-column="1" />
+        <state relative-caret-position="389">
+          <caret line="82" column="28" lean-forward="true" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/audit/UserDateAudit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Training.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1497#1498#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/justas/trainingpartner/model/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="36" column="5" selection-end-line="45" selection-end-column="1" />
         </state>
       </provider>
     </entry>

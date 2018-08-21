@@ -28,8 +28,8 @@ public class TrainingServiceImpl implements TrainingService {
     }
 
     @Override
-    public List<Training> getUserTrainings(String username) {
-        return trainingRepository.findByUsername(username);
+    public List<Training> getUserTrainings(int userId) {
+        return trainingRepository.findByUserId(userId);
     }
 
     @Override

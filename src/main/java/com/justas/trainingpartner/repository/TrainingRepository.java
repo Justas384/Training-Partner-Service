@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface TrainingRepository extends JpaRepository<Training, Integer> {
-    List<Training> findByUsername(String username);
+    List<Training> findByUserId(int userId);
 }

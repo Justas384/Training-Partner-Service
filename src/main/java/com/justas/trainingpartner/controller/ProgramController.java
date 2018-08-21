@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/programs")
@@ -42,12 +41,14 @@ public class ProgramController {
         return ResponseEntity.created(location).body(result);
     }
 
-    @GetMapping("/{username}")
-    public List<Program> getUserPrograms(@PathVariable String username) {
-//        TODO: refactor to return PagedResponse.
+//    TODO: refactor endpoint to be unique.
 
-        return programService.getUserPrograms(username);
-    }
+//    @GetMapping("/{userId}")
+//    public List<Program> getUserPrograms(@PathVariable int userId) {
+////        TODO: refactor to return PagedResponse.
+//
+//        return programService.getUserPrograms(userId);
+//    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<APIResponse> deleteProgram(@PathVariable int id) {

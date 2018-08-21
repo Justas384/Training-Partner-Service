@@ -1,37 +1,23 @@
 package com.justas.trainingpartner.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import com.justas.trainingpartner.model.audit.UserDateAudit;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 @Entity
-@EntityListeners(AuditingEntityListener.class)
-@JsonIgnoreProperties(value = "date", allowGetters = true)
 @Table(name = "TRAINING")
-public class Training implements Serializable {
+public class Training extends UserDateAudit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private int id;
-
-    @Column(name = "USERNAME")
-    private String username;
 
     @Column(name = "PROGRAM")
     private String program;
 
     @Column(name = "DAY")
     private int day;
-
-    @Column(name = "DATE", updatable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    @CreatedDate
-    private Date date;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "TRAINING_ID")
@@ -43,14 +29,6 @@ public class Training implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getProgram() {
@@ -67,14 +45,6 @@ public class Training implements Serializable {
 
     public void setDay(int day) {
         this.day = day;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     public List<TrainingItem> getTrainingItems() {

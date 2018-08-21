@@ -28,8 +28,8 @@ public class ProgramServiceImpl implements ProgramService {
     }
 
     @Override
-    public List<Program> getUserPrograms(String username) {
-        return programRepository.findByUsername(username);
+    public List<Program> getUserPrograms(int userId) {
+        return programRepository.findByUserId(userId);
     }
 
     @Override

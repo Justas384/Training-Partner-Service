@@ -13,7 +13,7 @@ public interface ProgramService {
 
     Optional<Program> getProgram(int id);
 
-    List<Program> getUserPrograms(String username);
+    List<Program> getUserPrograms(int userId);
 
     void deleteProgram(int id);
 }
