@@ -1,21 +1,25 @@
 package com.justas.trainingpartner.payload;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-
-public class SignUpRequest {
-    @NotBlank
+public class UserSummary {
+    private int id;
     private String name;
-
-    @NotBlank
     private String username;
-
-    @NotBlank
-    @Email
     private String email;
 
-    @NotBlank
-    private String password;
+    public UserSummary(int id, String name, String username, String email) {
+        this.id = id;
+        this.name = name;
+        this.username = username;
+        this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -39,13 +43,5 @@ public class SignUpRequest {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 }

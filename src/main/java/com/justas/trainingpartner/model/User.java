@@ -3,17 +3,29 @@ package com.justas.trainingpartner.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {
+                "username"
+        }),
+        @UniqueConstraint(columnNames = {
+                "email"
+        })
+})
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private int id;
+    private String name;
     private String username;
+
+    @Email
+    private String email;
 
     @Column(columnDefinition = "char")
     private String password;
@@ -21,23 +33,17 @@ public class User implements Serializable {
     private boolean enabled;
 
     @JsonIgnore
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "USER_ID")
     private List<Authority> authorities;
 
-    public User() {
-
-    }
-
-    public User(String username, String password, boolean enabled) {
+    public User(String name, String username, @Email String email, String password, boolean enabled, List<Authority> authorities) {
+        this.name = name;
         this.username = username;
+        this.email = email;
         this.password = password;
         this.enabled = enabled;
-    }
-
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
+        this.authorities = authorities;
     }
 
     public int getId() {
@@ -48,12 +54,28 @@ public class User implements Serializable {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getUsername() {
         return username;
     }
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {

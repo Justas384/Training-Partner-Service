@@ -64,7 +64,7 @@ public class AuthenticationController {
 
         // Creating user's account.
 
-        User user = new User(signUpRequest.getUsername(), signUpRequest.getPassword(), true);
+        User user = new User(signUpRequest.getName(), signUpRequest.getUsername(), signUpRequest.getEmail(), signUpRequest.getPassword(), true, null);
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
@@ -79,8 +79,8 @@ public class AuthenticationController {
         User result = userRepository.save(user);
 
         URI location = ServletUriComponentsBuilder
-                .fromCurrentContextPath().path("/api/users/{username}")
-                .buildAndExpand(result.getUsername()).toUri();
+                .fromCurrentContextPath().path("/api/users/{userId}")
+                .buildAndExpand(result.getId()).toUri();
 
         return ResponseEntity.created(location).body(result);
     }

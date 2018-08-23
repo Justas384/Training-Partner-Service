@@ -13,7 +13,9 @@ import java.util.stream.Collectors;
 
 public class UserPrincipal implements UserDetails {
     private int id;
+    private String name;
     private String username;
+    private String email;
 
     @JsonIgnore
     private String password;
@@ -21,9 +23,11 @@ public class UserPrincipal implements UserDetails {
 
     private Collection<? extends GrantedAuthority> authorities;
 
-    public UserPrincipal(int id, String username, String password, boolean enabled, Collection<? extends GrantedAuthority> authorities) {
+    public UserPrincipal(int id, String name, String username, String email, String password, boolean enabled, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
+        this.name = name;
         this.username = username;
+        this.email = email;
         this.password = password;
         this.enabled = enabled;
         this.authorities = authorities;
@@ -34,16 +38,24 @@ public class UserPrincipal implements UserDetails {
                 new SimpleGrantedAuthority(authority.getAuthority())
         ).collect(Collectors.toList());
 
-        return new UserPrincipal(user.getId(), user.getUsername(), user.getPassword(), user.getEnabled(), authorities);
+        return new UserPrincipal(user.getId(), user.getName(), user.getUsername(), user.getEmail(), user.getPassword(), user.getEnabled(), authorities);
     }
 
     public int getId() {
         return id;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String getUsername() {
         return username;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     @Override
